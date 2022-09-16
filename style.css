@@ -1,12 +1,15 @@
 :root {
-  --grey: #e7e5e4;
-  --blue: #3498db;
-  --white: white;
+  --grey: #e2e8f0;
+  --secondary-color: #3498db;
+  --primary-color: white;
   --yellow: #facc14;
+  --text-grey: #6e6e6e;
+  --black: black;
 }
 
 h3,
-p {
+p,
+h4 {
   margin: 0;
 }
 
@@ -32,10 +35,12 @@ body {
   grid-template: 1fr 1fr / 1fr 1fr;
   padding: 1rem 2rem;
   padding-top: 0.2rem;
+  box-shadow: rgb(17 12 46 / 15%) -1px 4px 7px 0px;
+  z-index: 1;
 }
 
 .side-bar {
-  background-color: var(--blue);
+  background-color: var(--secondary-color);
   grid-row: 1 / 3;
   /* display: grid; */
   gap: 1.2rem;
@@ -51,7 +56,7 @@ body {
   font-family: Arial;
   color: #ffffff;
   font-size: 16px;
-  background: var(--blue);
+  background: var(--secondary-color);
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   width: 6rem;
@@ -81,7 +86,7 @@ body {
 }
 
 .header-bar-2 {
-  /* padding: 1rem; */
+  padding: 0.6rem;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 2.5rem;
@@ -116,12 +121,14 @@ body {
   margin: 0;
   /* grid-column: 2/3; */
   align-self: end;
+  color: var(--black);
 }
 .my-name {
   margin: 0;
   /* grid-column: 2/3; */
   font-size: 1.3rem;
   font-weight: bold;
+  color: var(--black);
 }
 
 .header-bar-4 {
@@ -139,7 +146,7 @@ body {
   font-family: Arial;
   color: #ffffff;
   font-size: 16px;
-  background: #3498db;
+  background: var(--secondary-color);
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   width: 6rem;
@@ -159,13 +166,13 @@ body {
 }
 
 .dashboard > h3 {
-  color: white;
+  color: var(--primary-color);
 }
 
 .nav-list {
   display: grid;
   align-items: center;
-  color: white;
+  color: var(--primary-color);
   list-style: none;
   padding: 1rem;
   margin: 0;
@@ -188,12 +195,9 @@ body {
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   grid-template-rows: 1fr 1fr;
+  background-color: var(--grey);
 }
 
-.mybox {
-  border: 1px solid red;
-  background-color: #e7e5e4;
-}
 .mybox > h3 {
   padding: 1rem;
   padding-bottom: 0;
@@ -214,10 +218,11 @@ body {
 }
 .card {
   max-width: 300px;
-  background-color: var(--white);
+  background-color: var(--primary-color);
   border-left: 10px solid var(--yellow);
   border-radius: 1em;
   padding: 1.3rem;
+  box-shadow: rgb(17 12 46 / 15%) 0px 7px 7px 0px;
 }
 
 .card-text {
@@ -231,9 +236,14 @@ body {
   /* border: 1px solid red; */
   justify-content: end;
   gap: 20px;
+  padding: 0.3rem;
 }
 .card h3 {
   margin: 0;
+}
+
+p {
+  color: var(--text-grey);
 }
 .content > h3 {
   padding: 30px;
@@ -244,7 +254,49 @@ body {
 }
 
 .announcements {
+  padding-right: 2rem;
+}
+
+.ann-container {
+  background-color: var(--primary-color);
+  /* height: 300px; */
+  border-radius: 1em;
+  /* display: flex;
+  flex-direction: column; */
+  gap: 2rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.ann-item {
+  margin: 1rem;
 }
 
 .trending {
+  padding-right: 2rem;
+}
+
+.trend-container {
+  background-color: var(--primary-color);
+  border-radius: 1em;
+  gap: 2rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.trend-item {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 0.8rem;
+}
+
+.trend-img {
+  grid-row: 1/3;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.trend-p {
+  color: var(--black);
 }
