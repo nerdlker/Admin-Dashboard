@@ -5,6 +5,7 @@
   --yellow: #facc14;
   --text-grey: #6e6e6e;
   --black: black;
+  --card-shadow: rgb(17 12 46 / 15%) 0px 7px 7px 0px;
 }
 
 h3,
@@ -168,6 +169,9 @@ body {
 .dashboard > h3 {
   color: var(--primary-color);
 }
+#proj {
+  padding-left: 4rem;
+}
 
 .nav-list {
   display: grid;
@@ -222,7 +226,7 @@ body {
   border-left: 10px solid var(--yellow);
   border-radius: 1em;
   padding: 1.3rem;
-  box-shadow: rgb(17 12 46 / 15%) 0px 7px 7px 0px;
+  box-shadow: var(--card-shadow);
 }
 
 .card-text {
@@ -266,6 +270,7 @@ p {
   gap: 2rem;
   padding: 0.5rem;
   margin-top: 1rem;
+  box-shadow: var(--card-shadow);
 }
 
 .ann-item {
@@ -282,6 +287,7 @@ p {
   gap: 2rem;
   padding: 0.5rem;
   margin-top: 1rem;
+  box-shadow: var(--card-shadow);
 }
 
 .trend-item {
